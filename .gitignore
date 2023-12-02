@@ -1,0 +1,10 @@
+.terraform
+.terraform.lock.hcl
+terraform.exe
+terraform.tfstate
+terraform.tfstate.backup
+./modules/kms/terraform.lock.hcl
+./modules/kms/.terraform
+./modules/kms/terraform.tfstate
+./modules/kms/terraform.tfstate.backup
+
