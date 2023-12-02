@@ -28,6 +28,8 @@ resource "aws_instance" "ec2-instance-tf" {
         Name = "root-unencrypted"
       }
       volume_size = "10"
+      encrypted = true
+      kms_key_id = module.kms.aws_kms_key
     }
     ebs_block_device {
       device_name = "/dev/sdf"
@@ -36,6 +38,8 @@ resource "aws_instance" "ec2-instance-tf" {
         Name = "ebs-unencrypted"
       }
       volume_size = "10"
+      encrypted = true
+      kms_key_id = module.kms.aws_kms_key
     }
 }
 
